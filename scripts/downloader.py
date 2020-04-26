@@ -40,6 +40,5 @@ for i, book in enumerate(books_list):
     print('{0} : {1}'.format(i, book[1]))
     data = requests.get(book[3].replace('/book/', '/content/pdf/'))
     open('{0}{1}..{1}books{1}{2}.pdf'.format(dir_path, delimitter, book[1]), 'wb').write(data.content)
-    break
 
 print('\n \n ~~~~~~~~~ https://ptirupac.com ~~~~~~~~~')
